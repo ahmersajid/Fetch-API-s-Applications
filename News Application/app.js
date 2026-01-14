@@ -14,7 +14,7 @@ window.onload = function () {
                     const imageUrl = el.image_url || 'https://via.placeholder.com/300x200?text=No+Image';
                     getdiv.innerHTML += `
                         <div class="card m-5" style="width: 18rem;" id="Cards">
-                            <img src="${imageUrl}" class="card-img-top m-2" alt="${el.title || 'News image'}">
+                            <img src="${imageUrl}" class="card-img-top mt-2" alt="${el.title || 'News image'}">
                             <div class="card-body">
                                 <h5 class="card-title" id="heading-color">${el.creator || 'Unknown author'}</h5>
                                 <p class="card-text" id="text-color">${el.description || 'No description available'}</p>
@@ -55,7 +55,7 @@ function Search() {
                     const imageUrl = el.image_url || 'https://via.placeholder.com/300x200?text=No+Image';
                     getdiv.innerHTML += `
                         <div class="card m-5" style="width: 18rem;" id="Cards">
-                            <img src="${imageUrl}" class="card-img-top m-2" alt="${el.title || 'News image'}">
+                            <img src="${imageUrl}" class="card-img-top mt-2" alt="${el.title || 'News image'}">
                             <div class="card-body">
                                 <h5 class="card-title">${el.creator || 'Unknown author'}</h5>
                                 <p class="card-text">${el.description || 'No description available'}</p>
@@ -74,5 +74,4 @@ function Search() {
 
     getSearch.value = "";
 }
-
 

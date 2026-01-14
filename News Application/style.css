@@ -37,17 +37,21 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.search-icon{
+  width:20px;
+  height:20px;
+}
+
 @keyframes animate-gradient {
   to { background-position: 200%; }
 }
 
-/* ===== Updated Navbar Styles ===== */
 .navbar {
   padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
-  display: none; /* Hide brand by default */
+  display: none; 
 }
 
 .navbar-toggler {
@@ -91,33 +95,48 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* ===== Search/Search Styles ===== */
+/* Search Section Styles */
+.input-group {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 #search {
-  border-radius: 25px;
+  border-radius: 25px 0 0 25px !important;
   padding: 0.75rem 1.25rem;
   border: 1px solid #ced4da;
+  border-right: none;
   transition: all 0.3s;
 }
 
 #search:focus {
   border-color: #3F5EFB;
   box-shadow: 0 0 0 0.25rem rgba(63, 94, 251, 0.25);
+  outline: none;
 }
 
-#hero-section-nav button {
+.input-group .btn-primary {
+  border-radius: 0 25px 25px 0 !important;
+  padding: 0.75rem 1.5rem;
   background: linear-gradient(90deg, #3F5EFB, #60b2ff);
-  border: none;
-  border-radius: 25px;
+  border: 1px solid #3F5EFB;
+  border-left: none;
+  white-space: nowrap;
   font-weight: 500;
   transition: all 0.3s;
 }
 
-#hero-section-nav button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(63, 94, 251, 0.3);
+.input-group .btn-primary:hover {
+  transform: none;
+  box-shadow: 0 0 10px rgba(63, 94, 251, 0.3);
 }
 
-/* ===== News Cards ===== */
+#hero-section-nav button:hover {
+  transform: none;
+  box-shadow: 0 0 10px rgba(63, 94, 251, 0.3);
+}
+
 #content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -129,6 +148,7 @@ h1 {
 
 #Cards{
   border: 2px solid lightblue;
+  border-radius: 15px;
 }
 
 .card {
@@ -193,7 +213,6 @@ h1 {
   box-shadow: 0 5px 15px rgba(63, 94, 251, 0.3);
 }
 
-/* ===== Footer Styles ===== */
 #footer-color {
   background: linear-gradient(135deg, #1e2a3a, #2c3e50);
   border-radius: 12px;
@@ -243,7 +262,6 @@ h1 {
   margin: 1.5rem 0;
 }
 
-/* ===== Back to Top Button ===== */
 #up-btn {
   position: fixed;
   bottom: 2rem;
@@ -265,7 +283,6 @@ h1 {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* ===== Responsive Styles ===== */
 @media (max-width: 992px) {
   #content {
     display: flex;
@@ -277,7 +294,6 @@ h1 {
     font-size: 1.8rem;
   }
   
-  /* Navbar adjustments */
   .navbar-nav {
     gap: 0.3rem;
   }
@@ -289,17 +305,21 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  #hero-section-nav .d-flex {
+  .input-group {
     flex-direction: column;
+    gap: 0.5rem;
   }
   
   #search {
-    
-    margin-bottom: 1rem;
-    margin-right: 0 !important;
+    border-radius: 25px !important;
+    border-right: 1px solid #ced4da;
+    width: 100%;
+    margin-bottom: 0;
   }
   
-  #hero-section-nav button {
+  .input-group .btn-primary {
+    border-radius: 25px !important;
+    border: 1px solid #3F5EFB;
     width: 100%;
   }
   
@@ -309,7 +329,6 @@ h1 {
     gap: 2rem;
   }
   
-  /* Navbar mobile styles */
   .navbar {
     padding: 0.5rem;
   }
@@ -335,7 +354,6 @@ h1 {
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  /* Specific fixes for the problematic range */
   .navbar-nav {
     flex-wrap: wrap;
     justify-content: center;
@@ -351,30 +369,15 @@ h1 {
 }
 
 @media (max-width: 576px) {
+  .input-group {
+    width: 90%;
+  }
+  
   #content {
     grid-template-columns: 1fr;
     padding: 0.5rem;
   }
   
-  #hero-section-nav .d-flex {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-   #search {
-    width: 48%;
-    margin: 0;
-    margin-bottom: 1rem;
-  }
-
-    #hero-section-nav button {
-    width: 48%;
-    margin: 0;
-    padding: 0.75rem 0.5rem;
-  }
-  
-
   .card {
     max-width: 100%;
   }
@@ -393,7 +396,6 @@ h1 {
     height: 40px;
   }
   
-  /* Navbar mobile adjustments */
   .navbar {
     padding: 0.25rem;
   }

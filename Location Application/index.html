@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover • Global Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<nav class="header-nav">
+    <div class="nav-container">
+        <div class="logo">Discover</div>
+        <div class="nav-stats">
+            <div class="stat-item">
+                <div class="stat-value">360</div>
+                <div class="stat-label">Post</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">160k</div>
+                <div class="stat-label">Follower</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">140k</div>
+                <div class="stat-label">Following</div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="main-content">
+    <!-- Sidebar -->
+    <aside class="sidebar m-3">
+        <div class="sidebar-section">
+            <div class="section-title">
+                <i class="fas fa-search icon"></i> Search Country
+            </div>
+            <div class="controls-container">
+                <input type="text" id="searchInput" placeholder="Search country...">
+                <button class="search-btn" onclick="searchCountry()">
+                    <i class="fas fa-search icon"></i> Search
+                </button>
+                <button id="locBtn">
+                    <i class="fas fa-location-arrow icon"></i> Get My Country
+                </button>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="section-title">
+                <i class="fas fa-history icon"></i> Recent Search
+            </div>
+            <ul class="recent-searches" id="recentSearches">
+                <li>Pakistan</li>
+                <li>India</li>
+                <li>China</li>
+                <li>Iran</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="cards-area m-3" id="cards">
+        <!-- Initial state -->
+        <div class="hero-card">
+            <div class="hero-content">
+                <div class="hero-header">
+                    <div>
+                        <h1 class="hero-title">Global Explorer</h1>
+                        <p class="hero-subtitle">Discover countries around the world</p>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div style="text-align: center; padding: 3rem 1rem;">
+                    <i class="fas fa-globe-americas" style="font-size: 3rem; color: var(--accent-primary); margin-bottom: 1.5rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Your Story</h3>
+                    <p style="color: var(--text-secondary); max-width: 400px; margin: 0 auto 2rem;">
+                        Discover adventure in patagonia's peaks or serenity provence's @hamlets - arrival
+                    </p>
+                    <button class="search-btn" onclick="fetchCountryDetails('France')" style="width: auto; padding: 0.8rem 2rem;">
+                        <i class="fas fa-play icon"></i> Start Exploring
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

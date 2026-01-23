@@ -6,25 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-in</title>
     <link rel="stylesheet" href="sign-in.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </head>
 
 <body>
-
     <form id="Sign-in-Form">
         <h1>Sign-in</h1>
 
-        <input type="text" placeholder="Name" required id="Name">
-        <input type="email" placeholder="User-Name" required id="Username">
-        <input type="password" placeholder="Password" required id="Password">
-        <input type="password" placeholder="Confirm-Password" required id="Confirm-Password">
+        <div class="input-container">
+            <input type="text" placeholder="Name" required id="Name">
+        </div>
+
+        <div class="input-container">
+            <input type="email" placeholder="Email" required id="Username">
+        </div>
+        
+        <div class="input-container password-container">
+            <input type="password" placeholder="Password" required id="Password">
+            <button type="button" class="toggle-password" id="togglePassword">
+                <i class="fas fa-eye"></i>
+            </button>
+        </div>
+        
+        <div class="input-container password-container">
+            <input type="password" placeholder="Confirm Password" required id="Confirm-Password">
+            <button type="button" class="toggle-password" id="toggleConfirmPassword">
+                <i class="fas fa-eye"></i>
+            </button>
+        </div>
 
         <button type="submit">Sign-in</button>
         &nbsp;
         <div class="p-a">
-        <p>already have an account?</p>
-        <a href="Login.html">Go to Login</a>
+            <p>already have an account?</p>
+            <a href="Login.html">Go to Login</a>
         </div>
     </form>
 
